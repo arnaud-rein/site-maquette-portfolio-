@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- En-tête de la page -->
+        <meta charset="utf-8" />
+        <title>Site exemple</title>
+        <link rel="stylesheet" href=".css" />
+
+    </head>
+
+    <body>
+        <nav>
+            <ul>menu déroulant crée à partir de JavaScript
+             <a href=""><li>page 1</li></a>
+             <a href=""><li>page 2</li></a>
+             <a href=""><li>page 3</li></a>
+            </ul>
+        </nav>
+
+        <div id="premier">
+            <div class="objet 1">case flexbox : </br> 
+            c'est une technique utilisée pour placer les élements sur la page en html/css</div>
+            <div class="objet 2">case flexbox</div>
+        </div>
+
+        <div id="deux">
+           <button>Clique-ici </button><div class="chose 1"> Bouton crée à partir de javascript</div>
+            <div class="chose 2"></div>
+        </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script type="text/javascript">
+            var ul = $('ul');
+            var luli = $('ul li');
+
+            luli.hide();
+
+            ul.mouseover(function(){
+                luli.show();
+            });
+
+            ul.mouseout(function(){
+                luli.hide()
+            });
+
+
+            var cache = $('.chose');
+            cache.hide();
+
+            var button = $('button');
+            button.click(function(){
+                button.hide();
+                cache.show();
+            });
+
+            
+
+
+
+
+
+        </script>
+
+        <style type="text/css">
+            body
+            {
+                font-family: Arial Black;
+            }
+
+
+            nav
+            {
+                display: flex;
+                align-items: center;
+                width: 105%;
+                height: 75px;
+                position: fixed;
+                background-color: var(--noir);
+                margin-top: -16px;
+                margin-left: -16px;
+                margin-right: -16px;
+                color: var(--jaune);
+                z-index: 1;
+
+            }
+
+            #premier
+            {
+                display: flex;
+                width: 105%;
+                justify-content: center;
+                align-items: center;
+                margin-left: -16px;
+                margin-right: -16px;
+                height: 650px;
+                background-color: white;
+            }
+
+            .objet
+            {
+                display: flex;
+                background-color: var(--noir);
+                width: 250px;
+                height: 300px;
+                margin: 15px;
+                color: var(--red);
+            }
+
+            .objet:hover
+            {
+                transform: scale(1.5);
+                background-color: var(--jaune);
+            }
+
+            :root
+            {
+                --jaune: rgb(246, 208, 82);
+                --noir:  rgb(15, 10, 20);
+                --white:  rgb(250, 240, 245);
+                --red: rgb(255,15,50);
+            }
+
+            #deux
+             {
+                display: flex;
+                width: 105%;
+                justify-content: center;
+                align-items: center;
+                margin-left: -16px;
+                margin-right: -16px;
+                height: 650px;
+                background-color: var(--noir);
+                background-image: url('https://arnaudrein.files.wordpress.com/2022/05/sans-titre.png?w=1024');
+            }
+
+            .chose
+            {
+                display: flex;
+                width: 250px;
+                height: 300px;
+                background-color: var(--noir);
+                margin: 15px;
+                color: var(--white);
+            }
+
+            button
+            {
+                display: flex;
+                width: 250px;
+                height: 300px;
+                background-color: var(--jaune);
+                font-size: 2em;
+            }
+
+            ul
+            {
+                list-style-type: none;
+                margin-top: 4px;
+            }
+
+
+            ul li 
+            {
+
+                display: ;
+                color: var(--jaune);
+                width: 150px;
+                background-color: var(--red);
+                border: 2px black solid;
+            }
+
+            a
+            {
+                text-decoration: none;
+                color: var(--jaune);
+
+            }
+
+        </style>
+    </body>
